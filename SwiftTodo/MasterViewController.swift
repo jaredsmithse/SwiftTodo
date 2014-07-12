@@ -11,7 +11,7 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var objects = [NSDate]()
+    var objects = [Task]()
 
 
     override func awakeFromNib() {
@@ -41,7 +41,7 @@ class MasterViewController: UITableViewController {
     }
 
     func insertNewObject(sender: AnyObject) {
-        objects += NSDate()
+        objects += Task(name: "My task")
         let indexPath = NSIndexPath(forRow: objects.count - 1, inSection: 0)
         self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }

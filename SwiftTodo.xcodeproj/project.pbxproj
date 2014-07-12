@@ -13,6 +13,7 @@
 		7F8719991971AEC200FCDB22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F8719971971AEC200FCDB22 /* Main.storyboard */; };
 		7F87199B1971AEC200FCDB22 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F87199A1971AEC200FCDB22 /* Images.xcassets */; };
 		7F8719A71971AEC200FCDB22 /* SwiftTodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8719A61971AEC200FCDB22 /* SwiftTodoTests.swift */; };
+		7FC6EEAC1971B40500A075CD /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC6EEAB1971B40500A075CD /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 		7F8719A01971AEC200FCDB22 /* SwiftTodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F8719A51971AEC200FCDB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F8719A61971AEC200FCDB22 /* SwiftTodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTodoTests.swift; sourceTree = "<group>"; };
+		7FC6EEA91971B40400A075CD /* SwiftTodo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftTodo-Bridging-Header.h"; sourceTree = "<group>"; };
+		7FC6EEAA1971B40500A075CD /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		7FC6EEAB1971B40500A075CD /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +83,13 @@
 			children = (
 				7F8719911971AEC200FCDB22 /* AppDelegate.swift */,
 				7F8719931971AEC200FCDB22 /* MasterViewController.swift */,
+				7FC6EEAA1971B40500A075CD /* Task.h */,
+				7FC6EEAB1971B40500A075CD /* Task.m */,
 				7F8719951971AEC200FCDB22 /* DetailViewController.swift */,
 				7F8719971971AEC200FCDB22 /* Main.storyboard */,
 				7F87199A1971AEC200FCDB22 /* Images.xcassets */,
 				7F87198F1971AEC200FCDB22 /* Supporting Files */,
+				7FC6EEA91971B40400A075CD /* SwiftTodo-Bridging-Header.h */,
 			);
 			path = SwiftTodo;
 			sourceTree = "<group>";
@@ -211,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC6EEAC1971B40500A075CD /* Task.m in Sources */,
 				7F8719961971AEC200FCDB22 /* DetailViewController.swift in Sources */,
 				7F8719941971AEC200FCDB22 /* MasterViewController.swift in Sources */,
 				7F8719921971AEC200FCDB22 /* AppDelegate.swift in Sources */,
@@ -331,9 +339,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftTodo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftTodo/SwiftTodo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -342,9 +353,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SwiftTodo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SwiftTodo/SwiftTodo-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -403,6 +416,7 @@
 				7F8719AC1971AEC200FCDB22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F8719AD1971AEC200FCDB22 /* Build configuration list for PBXNativeTarget "SwiftTodoTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +425,7 @@
 				7F8719AF1971AEC200FCDB22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
